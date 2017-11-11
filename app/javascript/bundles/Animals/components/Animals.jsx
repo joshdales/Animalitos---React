@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import Animal from './Animal';
 
 export default class Animals extends React.Component {
   static propTypes = {
@@ -19,7 +20,7 @@ export default class Animals extends React.Component {
     console.log(this.props);
     return (
       <section className="animals">
-        {this.props.animals.map( animal => <Animal animal={animal}/> )}
+        {this.props.animals.map( animal => <Animal key={animal.id} animal={animal}/> )}
       </section>
     );
   }
