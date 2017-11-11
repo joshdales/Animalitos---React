@@ -16,10 +16,15 @@ export default class Animals extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     return (
-      <div>
-        Inside react
-      </div>
+      <section className="animals">
+        {this.props.animals.map((animal) => (
+          <figure className="animal">
+            <div className="background" style={{backgroundImage: `url(${animal.image})`}}/>
+          </figure>
+        ))}
+      </section>
     );
   }
 }
