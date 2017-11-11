@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import player from '../Player'
 
 export default class Animal extends React.Component {
   static propTypes = {
@@ -12,7 +13,7 @@ export default class Animal extends React.Component {
 
     console.log(this.props);
     return (
-      <figure className="animal">
+      <figure className="animal" onDoubleClick={ (event) => {player.play(animal.sound)} }>
         <div className="background" style={{backgroundImage: `url(${animal.image})`}}/>
         <figcaption style={{backgroundColor: animal.bg_colour}}>
           <h2>{animal.name}</h2>

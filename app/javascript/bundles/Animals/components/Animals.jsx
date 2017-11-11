@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Animal from './Animal';
+import player from '../Player'
 
 export default class Animals extends React.Component {
   static propTypes = {
