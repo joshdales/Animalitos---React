@@ -20,9 +20,13 @@ export default class Animals extends React.Component {
   render() {
     console.log(this.props);
     return (
+      
       <section className="animals">
         {this.props.animals.map( animal => <Animal key={animal.id} animal={animal}/> )}
       </section>
+
+      <Album />
+
     );
   }
 }
