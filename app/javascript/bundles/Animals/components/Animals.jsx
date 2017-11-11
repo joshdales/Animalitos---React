@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Animal from './Animal';
-import player from '../Player'
+import player from '../Player';
+import Album from './Album';
 
 export default class Animals extends React.Component {
   static propTypes = {
@@ -14,19 +15,24 @@ export default class Animals extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { };
+    this.state = {
+      images: [].
+      active: false
+    };
   }
 
   render() {
-    console.log(this.props);
+    const {animals} = this.props;
+    const {images, active} = this.props;
+
     return (
-      
-      <section className="animals">
-        {this.props.animals.map( animal => <Animal key={animal.id} animal={animal}/> )}
-      </section>
+      <div>
+        <section className="animals">
+          {animals.map( animal => <Animal key={animal.id} animal={animal}/> )}
+        </section>
 
-      <Album />
-
+        <Album images={images} active={active}/>
+      </div>
     );
   }
 }
