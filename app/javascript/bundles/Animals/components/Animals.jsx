@@ -21,7 +21,16 @@ export default class Animals extends React.Component {
     };
   }
 
-
+  componentDidMount() {
+    document.body.addEventListener('keyup', (event) => {
+      if (event.keyCode === 27) {
+        this.setState({
+          images: [],
+          active: false
+        })
+      }
+    })
+  }
 
   loadImages = (animal) => {
     const client = 'a1aff3b188b6ffd926e3c12232423dcf29f199ea31f5ef7fd561d1f0d998dcb5'
