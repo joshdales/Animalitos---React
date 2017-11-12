@@ -16,7 +16,7 @@ export default class Album extends React.Component {
     return (
       <section className={`album ${ active ? 'active' : null }`}>
         {images.map(image => (
-          <img key={image.id} src={image.url.regular} alt={image.description}/>
+          <img key={image.id} src={image.urls.regular} alt={image.description}/>
         ))}
       </section>
     );
