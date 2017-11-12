@@ -42,7 +42,7 @@ export default class Animals extends React.Component {
     return (
       <div>
         <section className="animals">
-          {animals.map( animal => <Animal key={animal.id} animal={animal}/> )}
+          {animals.map( animal => <Animal key={animal.id} animal={animal} loadImages={this.loadImages}/> )}
         </section>
 
         <Album images={images} active={active}/>
